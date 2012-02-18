@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- http://www.iconarchive.com/ -->
-<!-- keytool -list -alias androiddebugkey -keystore /home/michal/.android/debug.keystore -storepass android -keypass android -->
 <RelativeLayout 
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	android:orientation="vertical" 
@@ -12,7 +10,6 @@
 		android:layout_width="250dp" 
 		android:layout_height="wrap_content"
 		android:layout_centerInParent="true">
-		<!-- MAIN TITLE -->
 		<TextView 
 		    android:gravity="center"
 		    android:textSize="26sp"
@@ -21,7 +18,6 @@
 			android:layout_height="90dp"
 			android:layout_marginBottom="3dp"
 		/>
-		<!-- LOGIN TITLE -->
 		<TextView 
 			android:layout_width="fill_parent"
 			android:layout_height="wrap_content"
@@ -29,7 +25,6 @@
 			android:text="@string/login"
 			android:textSize="18sp"
 		/>
-		<!-- LOGIN TEXT -->
 		<EditText 
 			android:layout_width="250dp"
 			android:layout_height="wrap_content" 
@@ -37,7 +32,6 @@
 			android:textSize="18dp"
 			android:id="@+id/login_text"
 		/>
-		<!-- PASSWORD TITLE -->
 		<TextView
 			android:layout_width="250dp" 
 			android:layout_height="wrap_content" 
@@ -46,7 +40,6 @@
 			android:textSize="18sp"
 			android:layout_marginTop="5sp"
 		/>
-		<!-- PASSWORD TEXT -->
 		<EditText
 			android:layout_width="250dp" 
 			android:layout_height="wrap_content"
@@ -54,7 +47,6 @@
 			android:textSize="18dp"
 			android:inputType="textPassword"
 		/>
-		<!-- CHECKBOX FOR SAVING LOGIN -->
 		<CheckBox
 		    android:id="@+id/checkBox_remember"
 			android:text="@string/remember_login" 
@@ -62,7 +54,6 @@
 			android:layout_width="wrap_content" 
 			android:textSize="18sp"
 		/>
-		<!-- LOG IN BUTTON -->
 		<Button
 			android:layout_width="fill_parent" 
 			android:layout_height="wrap_content"
