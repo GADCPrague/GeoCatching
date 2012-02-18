@@ -11,5 +11,4 @@
         android:layout_height="wrap_content"
         android:text="AHOJ"
         android:textSize="22sp" />
-
 </LinearLayout>
