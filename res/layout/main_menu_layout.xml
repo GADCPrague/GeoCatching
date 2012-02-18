@@ -9,7 +9,7 @@
         android:layout_gravity="center"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/timer_label"
+        android:text="AHOJ"
         android:textSize="22sp" />
 
 </LinearLayout>
