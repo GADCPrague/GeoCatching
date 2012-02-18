@@ -11,13 +11,17 @@
         android:label="@string/app_name" >
         <activity
             android:name=".GeocatchingActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name" 
+            android:theme="@android:style/Theme.NoTitleBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MainMenuActivity" 
+        		  android:theme="@android:style/Theme.NoTitleBar"
+        		  android:screenOrientation="portrait"/>
     </application>
 
 </manifest>
