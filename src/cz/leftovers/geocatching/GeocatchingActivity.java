@@ -17,7 +17,7 @@ public class GeocatchingActivity extends Activity {
 	 * Starts this CommanderAppActivity.
 	 * @param savedInstanceState
 	 */
-	private int timerValue = 5000;
+	private int timerValue = 0000;
 	private TextView time;
 	
 	@Override
