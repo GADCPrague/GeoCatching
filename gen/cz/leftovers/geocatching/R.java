@@ -20,7 +20,8 @@ public final class R {
         public static final int login_text=0x7f050001;
         public static final int password_label=0x7f050002;
         public static final int password_text=0x7f050003;
-        public static final int timer_label=0x7f050006;
+        public static final int register_button=0x7f050006;
+        public static final int timer_label=0x7f050007;
     }
     public static final class layout {
         public static final int login_layout=0x7f030000;
@@ -29,11 +30,14 @@ public final class R {
     }
     public static final class string {
         public static final int app_name=0x7f040001;
+        public static final int close=0x7f040009;
+        public static final int error=0x7f040007;
         public static final int hello=0x7f040000;
         public static final int login=0x7f040002;
         public static final int login_button=0x7f040005;
         public static final int password=0x7f040003;
         public static final int register_button=0x7f040006;
         public static final int remember_login=0x7f040004;
+        public static final int wrong_parameters=0x7f040008;
     }
 }

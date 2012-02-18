@@ -52,7 +52,7 @@ public class GeocatchingActivity extends Activity {
 			public void onFinish() {
 				finish(); // Finishes this Activity and directs the user to Login screen.
 				overridePendingTransition(0, 0); // Denies "sliding" animation while finishing this Activity.
-				startActivity(new Intent(GeocatchingActivity.this, MainMenuActivity.class).addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION));
+				startActivity(new Intent(GeocatchingActivity.this, LoginActivity.class).addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION));
 			}
 		}.start(); // Starts the whole Timer.
 		// end of inner class CountDownTimer

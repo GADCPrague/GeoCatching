@@ -7,4 +7,7 @@
     <string name="remember_login">Remember login</string>
     <string name="login_button">Login</string>
     <string name="register_button">Register on-line now!</string>
+    <string name="error">ERROR</string>
+    <string name="wrong_parameters">Wrong parameters</string>
+    <string name="close">close</string>
 </resources>
