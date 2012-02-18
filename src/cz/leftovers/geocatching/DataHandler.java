@@ -22,10 +22,18 @@ public class DataHandler {
 		public ArrayList<String> ends = new ArrayList<String>();
 	}
 	private class ParsedMyGamesSet {
-		public ArrayList<String> names = new ArrayList<String>();
+		public ArrayList<String> locations = new ArrayList<String>();
+		public ArrayList<Integer> limit = new ArrayList<Integer>();
+		public ArrayList<Integer> connected = new ArrayList<Integer>();
+		public ArrayList<String> starts = new ArrayList<String>();
+		public ArrayList<String> ends = new ArrayList<String>();
 	}
 	
 	private class ParsedOneGameSet {
-		
+		private int activeUsersCount;
+		private int allUsersCount;
+		private String preyName;
+		private int preyAge;
+		private String interests;
 	}
 }
