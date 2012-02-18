@@ -15,10 +15,14 @@ public class DataHandler {
 	}
 	
 	private class ParsedActiveGamesSet {
-		public ArrayList<String> names = new ArrayList<String>();
+		public ArrayList<String> locations = new ArrayList<String>();
+		public ArrayList<Integer> limit = new ArrayList<Integer>();
+		public ArrayList<Integer> connected = new ArrayList<Integer>();
+		public ArrayList<String> starts = new ArrayList<String>();
+		public ArrayList<String> ends = new ArrayList<String>();
 	}
 	private class ParsedMyGamesSet {
-		public ArrayList<String> posInNames = new ArrayList<String>();
+		public ArrayList<String> names = new ArrayList<String>();
 	}
 	
 	private class ParsedOneGameSet {
