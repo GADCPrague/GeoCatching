@@ -26,5 +26,14 @@
         <activity android:name=".GameListActivity" 
         		  android:theme="@android:style/Theme.NoTitleBar"
         		  android:screenOrientation="portrait"/>
+        <activity android:name=".MyGamesActivity" 
+        		  android:theme="@android:style/Theme.NoTitleBar"
+        		  android:screenOrientation="portrait"/>
+        <activity android:name=".HistoryActivity" 
+        		  android:theme="@android:style/Theme.NoTitleBar"
+        		  android:screenOrientation="portrait"/>
+        <activity android:name=".SettingsActivity" 
+        		  android:theme="@android:style/Theme.NoTitleBar"
+        		  android:screenOrientation="portrait"/>
     </application>
 </manifest>
