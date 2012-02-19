@@ -19,7 +19,7 @@ public class SettingsActivity extends Activity {
 		iv.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				Toast.makeText(SettingsActivity.this, "Facebook linking window", Toast.LENGTH_LONG);
+				Toast.makeText(SettingsActivity.this, "Facebook linking window", Toast.LENGTH_LONG).show();
 			}
 		});
 		
@@ -27,7 +27,7 @@ public class SettingsActivity extends Activity {
 		iv.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				Toast.makeText(SettingsActivity.this, "Google+ linking window", Toast.LENGTH_LONG);
+				Toast.makeText(SettingsActivity.this, "Google+ linking window", Toast.LENGTH_LONG).show();
 			}
 		});
 		
@@ -35,7 +35,7 @@ public class SettingsActivity extends Activity {
 		iv.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				Toast.makeText(SettingsActivity.this, "Twitter linking window", Toast.LENGTH_LONG);
+				Toast.makeText(SettingsActivity.this, "Twitter linking window", Toast.LENGTH_LONG).show();
 			}
 		});
 		
@@ -43,7 +43,7 @@ public class SettingsActivity extends Activity {
 		iv.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				Toast.makeText(SettingsActivity.this, "Foursquare linking window", Toast.LENGTH_LONG);
+				Toast.makeText(SettingsActivity.this, "Foursquare linking window", Toast.LENGTH_LONG).show();
 			}
 		});
 	}
