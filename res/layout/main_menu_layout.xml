@@ -4,47 +4,101 @@
     android:layout_height="fill_parent"
     android:gravity="center"
     android:orientation="vertical" 
-    android:weightSum="100">
+    android:weightSum="100"
+    android:background="@color/color_main_menu_background">
 	
     <LinearLayout
         android:id="@+id/layoutTopStrip"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" 
-        android:orientation="horizontal"
-        android:background="@color/title_background_color">
+        android:orientation="vertical"
+        android:background="@color/color_title_background"
+        android:layout_weight="7">
 
-        <Button
-            android:id="@+id/buttonLogo"
+        <TextView
+            android:id="@+id/textView1"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/ic_case_off"/>
+            android:layout_height="@dimen/main_menu_top_bar"
+            android:gravity="center"
+            android:layout_gravity="center_vertical|center_horizontal|center"
+            android:textSize="@dimen/main_menu_top_bar_font_size"
+            android:textStyle="bold"
+            android:textColor="@color/color_main_menu_text"
+            android:text="@string/main_menu_title" />
 
     </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/buttonsFrame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" 
+        android:layout_weight="93"
+        android:weightSum="100"
+        android:layout_margin="@dimen/main_menu_shrink_factor">
 
     <LinearLayout
         android:id="@+id/layoutButtonRow1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" 
         android:orientation="horizontal"
-        android:layout_weight="30"
+        android:layout_weight="31"
         android:weightSum="100">
         
-        <FrameLayout  android:id="@+id/frameLayout1"   android:layout_width="wrap_content"  android:layout_height="match_parent"    android:layout_weight="50">
-	        <Button
-	            android:id="@+id/buttonGameList"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:background="@drawable/selector_btn_games"
-	            android:layout_gravity="center_vertical|center_horizontal"/>
+        <FrameLayout  android:id="@+id/frameLayout1"   android:layout_width="wrap_content"  android:layout_height="match_parent"    android:layout_weight="50" 
+            >
+	        <LinearLayout
+	            android:id="@+id/titleButton1"
+		       	android:layout_width="match_parent"
+		        android:layout_height="wrap_content" 
+		        android:orientation="vertical"
+		        android:layout_gravity="center_vertical|center_horizontal"
+		        >
+		        <Button
+		            android:id="@+id/buttonGameList"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:background="@drawable/selector_btn_all_games"
+		            android:layout_gravity="center_vertical|center_horizontal"/>
+		        
+		        <TextView 
+		            android:id="@+id/labelGameList"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="@string/game_list_label"
+		            android:layout_gravity="center_horizontal|bottom"
+		            android:typeface="sans"
+		            android:textSize="@dimen/main_menu_font_size"
+		            android:textColor="@color/color_main_menu_button_title"
+		            android:paddingTop="@dimen/main_menu_label_padding_top"/>
+	        </LinearLayout>
 		</FrameLayout>
 	        
         <FrameLayout  android:id="@+id/frameLayout2"   android:layout_width="wrap_content"  android:layout_height="match_parent"    android:layout_weight="50">
-	        <Button
-	            android:id="@+id/buttonPlayerGameList"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:background="@drawable/selector_btn_games" 
-	            android:layout_gravity="center_vertical|center_horizontal"/>
+            <LinearLayout
+	            android:id="@+id/titleButton2"
+		       	android:layout_width="match_parent"
+		        android:layout_height="wrap_content" 
+		        android:orientation="vertical"
+		        android:layout_gravity="center_vertical|center_horizontal"
+		        >
+		        <Button
+		            android:id="@+id/buttonPlayerGameList"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:background="@drawable/selector_btn_player_games" 
+		            android:layout_gravity="center_vertical|center_horizontal"/>
+		         <TextView 
+		            android:id="@+id/labelPlayerGameList"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="@string/player_game_list_label"
+		            android:layout_gravity="center_horizontal|bottom"
+		            android:typeface="sans"
+		            android:textSize="@dimen/main_menu_font_size"
+		            android:textColor="@color/color_main_menu_button_title"
+		            android:paddingTop="@dimen/main_menu_label_padding_top"/>
+		      </LinearLayout>
 	    </FrameLayout>
     </LinearLayout>
     
@@ -53,25 +107,61 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" 
         android:orientation="horizontal"
-         android:layout_weight="30"
+         android:layout_weight="31"
         android:weightSum="100">
         
         <FrameLayout  android:id="@+id/frameLayout3"   android:layout_width="wrap_content"  android:layout_height="match_parent"    android:layout_weight="50">
-        	<Button
-            	android:id="@+id/buttonPlayerHistory"
-            	android:layout_width="wrap_content"
-           	 	android:layout_height="wrap_content"
-            	android:background="@drawable/selector_btn_games" 
-            	android:layout_gravity="center_vertical|center_horizontal"/>
+            <LinearLayout
+	            android:id="@+id/titleButton3"
+		       	android:layout_width="match_parent"
+		        android:layout_height="wrap_content" 
+		        android:orientation="vertical"
+		        android:layout_gravity="center_vertical|center_horizontal"
+		        >
+	        	<Button
+	            	android:id="@+id/buttonPlayerHistory"
+	            	android:layout_width="wrap_content"
+	           	 	android:layout_height="wrap_content"
+	            	android:background="@drawable/selector_btn_history" 
+	            	android:layout_gravity="center_vertical|center_horizontal"/>
+	        	 <TextView 
+		            android:id="@+id/labelPlayerHistory"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="@string/history_label"
+		            android:layout_gravity="center_horizontal|bottom"
+		            android:typeface="sans"
+		            android:textSize="@dimen/main_menu_font_size"
+		            android:textColor="@color/color_main_menu_button_title"
+		            android:paddingTop="@dimen/main_menu_label_padding_top"/>
+	    	</LinearLayout>
         </FrameLayout>
         
 		<FrameLayout  android:id="@+id/frameLayout4"   android:layout_width="wrap_content"  android:layout_height="match_parent"    android:layout_weight="50">
-        	<Button
-           	 	android:id="@+id/buttonSettings"
-           	 	android:layout_width="wrap_content"
-           	 	android:layout_height="wrap_content"
-           	 	android:background="@drawable/selector_btn_games"
-				android:layout_gravity="center_vertical|center_horizontal"/>
+		    <LinearLayout
+	            android:id="@+id/titleButton4"
+		       	android:layout_width="match_parent"
+		        android:layout_height="wrap_content" 
+		        android:orientation="vertical"
+		        android:layout_gravity="center_vertical|center_horizontal"
+		        >
+	        	<Button
+	           	 	android:id="@+id/buttonSettings"
+	           	 	android:layout_width="wrap_content"
+	           	 	android:layout_height="wrap_content"
+	           	 	android:background="@drawable/selector_btn_settings"
+					android:layout_gravity="center_vertical|center_horizontal"/>
+	        	 <TextView 
+		            android:id="@+id/labelSettings"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="@string/settings_label"
+		            android:layout_gravity="center_horizontal|bottom"
+		            android:typeface="sans"
+		            android:textSize="@dimen/main_menu_font_size"
+		            android:textColor="@color/color_main_menu_button_title"
+		            android:paddingTop="@dimen/main_menu_label_padding_top"/>
+	    	</LinearLayout>    	 
         </FrameLayout>
     </LinearLayout>
     
@@ -81,26 +171,62 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" 
         android:orientation="horizontal"
-        android:layout_weight="30"
+        android:layout_weight="31"
         android:weightSum="100">
         
         <FrameLayout  android:id="@+id/frameLayout5"   android:layout_width="wrap_content"  android:layout_height="match_parent"    android:layout_weight="50">
-      	  	<Button
-         		android:id="@+id/buttonTMP"
-           		android:layout_width="wrap_content"
-           	 	android:layout_height="wrap_content"
-            	android:background="@drawable/selector_btn_games" 
-            	android:layout_gravity="center_vertical|center_horizontal"/>
+            <LinearLayout
+	            android:id="@+id/titleButton5"
+		       	android:layout_width="match_parent"
+		        android:layout_height="wrap_content" 
+		        android:orientation="vertical"
+		        android:layout_gravity="center_vertical|center_horizontal"
+		        >
+	      	  	<Button
+	         		android:id="@+id/buttonTMP"
+	           		android:layout_width="wrap_content"
+	           	 	android:layout_height="wrap_content"
+	            	android:background="@drawable/selector_btn_tmp" 
+	            	android:layout_gravity="center_vertical|center_horizontal"/>
+	      	  	 <TextView 
+		            android:id="@+id/labelTMP"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="@string/tmp_label"
+		            android:layout_gravity="center_horizontal|bottom"
+		            android:typeface="sans"
+		            android:textSize="@dimen/main_menu_font_size"
+		            android:textColor="@color/color_main_menu_button_title"
+		            android:paddingTop="@dimen/main_menu_label_padding_top"/>
+	    	</LinearLayout>  	  	 
       	</FrameLayout>
       	  	
  		<FrameLayout  android:id="@+id/frameLayout6"   android:layout_width="wrap_content"  android:layout_height="match_parent"    android:layout_weight="50">
-        	<Button
-            	android:id="@+id/buttonExit"
-            	android:layout_width="wrap_content"
-            	android:layout_height="wrap_content"
-            	android:background="@drawable/selector_btn_games" 
-            	android:layout_gravity="center_vertical|center_horizontal"/>
-         </FrameLayout>
+ 		    <LinearLayout
+	            android:id="@+id/titleButton6"
+		       	android:layout_width="match_parent"
+		        android:layout_height="wrap_content" 
+		        android:orientation="vertical"
+		        android:layout_gravity="center_vertical|center_horizontal"
+		        >
+	        	<Button
+	            	android:id="@+id/buttonExit"
+	            	android:layout_width="wrap_content"
+	            	android:layout_height="wrap_content"
+	            	android:background="@drawable/selector_btn_exit" 
+	            	android:layout_gravity="center_vertical|center_horizontal"/>
+	        	 <TextView 
+		            android:id="@+id/labelExit"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="@string/exit_label"
+		            android:layout_gravity="center_horizontal|bottom"
+		            android:typeface="sans"
+		            android:textSize="@dimen/main_menu_font_size"
+		            android:textColor="@color/color_main_menu_button_title"
+		            android:paddingTop="@dimen/main_menu_label_padding_top"/>
+	     	</LinearLayout>
+        </FrameLayout>
     </LinearLayout>
-        
+  </LinearLayout>
 </LinearLayout>

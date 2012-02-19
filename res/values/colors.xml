@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="title_background_color">#DDDDAAFF</color>
+    <color name="color_title_background">#555555</color>
+	<color name="color_main_menu_background">#ffffff</color>
+	<color name="color_main_menu_text">#aaaaaa</color>
+	<color name="color_main_menu_button_title">#000000</color>
 
         
 </resources>
