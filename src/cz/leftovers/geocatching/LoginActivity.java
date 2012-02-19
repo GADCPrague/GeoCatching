@@ -10,6 +10,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -46,6 +47,17 @@ public class LoginActivity extends Activity{
 			passwdText.setText(password);
 			chck.setChecked(checked);
 		}
+		
+		Button registerBtn = (Button) this.findViewById(R.id.register_button);
+		registerBtn.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Uri uri = Uri.parse("http://www.dentack.cz/geocatching/game-add.php");
+				Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+				startActivity(intent);
+			}
+		});
 		
 		Button loginBtn = (Button)this.findViewById(R.id.login_button);
 		/* LOGIN BUTTON listener */
