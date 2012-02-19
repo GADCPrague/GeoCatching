@@ -14,6 +14,18 @@
 			android:layout_marginBottom="3dp"
 		/>
     
+<<<<<<< HEAD
+=======
+    <TextView 
+		    android:gravity="center"
+		    android:textSize="26sp"
+		    android:text="@string/connect_with"
+			android:layout_width="fill_parent" 
+			android:layout_height="90dp"
+			android:layout_marginBottom="3dp"
+		/>
+    
+>>>>>>> 7046d7ed3faf2b387156d43204664d81ffd83205
      <LinearLayout
 	    	android:layout_width="fill_parent"
 	   	 	android:layout_height="wrap_content"
