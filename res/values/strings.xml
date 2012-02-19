@@ -37,5 +37,7 @@
 	<string name="back_pressed">What would you like to do now?</string>
 	<string name="turnoff">Turn off</string>
 	<string name="logout">Log out</string>
+	
+	<string name="social_logo">Social network logo</string>
     
 </resources>

@@ -39,16 +39,18 @@ public final class R {
         public static final int ic_exit_on=0x7f020002;
         public static final int ic_facebook=0x7f020003;
         public static final int ic_foursquare=0x7f020004;
-        public static final int ic_history_on=0x7f020005;
-        public static final int ic_launcher=0x7f020006;
-        public static final int ic_player_games_on=0x7f020007;
-        public static final int ic_settings_on=0x7f020008;
-        public static final int selector_btn_all_games=0x7f020009;
-        public static final int selector_btn_exit=0x7f02000a;
-        public static final int selector_btn_history=0x7f02000b;
-        public static final int selector_btn_player_games=0x7f02000c;
-        public static final int selector_btn_settings=0x7f02000d;
-        public static final int selector_btn_tmp=0x7f02000e;
+        public static final int ic_gplus=0x7f020005;
+        public static final int ic_history_on=0x7f020006;
+        public static final int ic_launcher=0x7f020007;
+        public static final int ic_player_games_on=0x7f020008;
+        public static final int ic_settings_on=0x7f020009;
+        public static final int ic_twitter=0x7f02000a;
+        public static final int selector_btn_all_games=0x7f02000b;
+        public static final int selector_btn_exit=0x7f02000c;
+        public static final int selector_btn_history=0x7f02000d;
+        public static final int selector_btn_player_games=0x7f02000e;
+        public static final int selector_btn_settings=0x7f02000f;
+        public static final int selector_btn_tmp=0x7f020010;
     }
     public static final class id {
         public static final int buttonExit=0x7f07002c;
@@ -138,6 +140,7 @@ public final class R {
         public static final int register_button=0x7f060006;
         public static final int remember_login=0x7f060004;
         public static final int settings_label=0x7f06000e;
+        public static final int social_logo=0x7f060020;
         public static final int tmp_label=0x7f06000f;
         public static final int turnoff=0x7f06001e;
         public static final int wrong_parameters=0x7f060008;
