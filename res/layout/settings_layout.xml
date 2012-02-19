@@ -41,7 +41,7 @@
         android:layout_height="50dp"
         android:layout_width="50dp"
         android:src="@drawable/ic_foursquare"
-        android:id="@+id/4sq_logo"
+        android:id="@+id/foursq_logo"
     />
     <TextView
        android:layout_height="wrap_content"

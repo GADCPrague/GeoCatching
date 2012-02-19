@@ -53,7 +53,6 @@ public final class R {
         public static final int selector_btn_tmp=0x7f020010;
     }
     public static final class id {
-        public static final int 4sq_logo=0x7f070031;
         public static final int buttonExit=0x7f07002c;
         public static final int buttonGameList=0x7f070016;
         public static final int buttonPlayerGameList=0x7f07001a;
@@ -63,6 +62,7 @@ public final class R {
         public static final int buttonsFrame=0x7f070012;
         public static final int checkBox_remember=0x7f07000c;
         public static final int fb_logo=0x7f07002f;
+        public static final int foursq_logo=0x7f070031;
         public static final int frameLayout1=0x7f070014;
         public static final int frameLayout2=0x7f070018;
         public static final int frameLayout3=0x7f07001d;
@@ -113,6 +113,7 @@ public final class R {
         public static final int main_menu_layout=0x7f030004;
         public static final int my_game_list_layout=0x7f030005;
         public static final int settings_layout=0x7f030006;
+        public static final int single_game_activity_layout=0x7f030007;
     }
     public static final class string {
         public static final int app_name=0x7f060001;

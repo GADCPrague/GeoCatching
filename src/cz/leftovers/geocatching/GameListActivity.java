@@ -136,7 +136,7 @@ public class GameListActivity extends Activity {
 			sView.location_label.setText( getString(R.string.game_list_item_location) + ": " );
 			sView.location_value.setText( objects.get(position).area );
 			sView.players_label.setText( getString(R.string.game_list_item_players) + ": " );
-			sView.players_value.setText( 0 + "/" + objects.get(position).capacity);
+			sView.players_value.setText( objects.get(position).login + "/" + objects.get(position).capacity);
 			sView.date_label.setText( getString(R.string.game_list_item_date) + ": ");
 			sView.date_value.setText( objects.get(position).gamefrom + "-" + objects.get(position).gameto);
 			
@@ -199,7 +199,7 @@ public class GameListActivity extends Activity {
 		String name;
 		String area;
 		int capacity;
-		//int connected;
+		int login;
 		String gamefrom;
 		String gameto;
 	}
