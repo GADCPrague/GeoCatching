@@ -31,7 +31,6 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -50,7 +49,7 @@ public class MyGamesActivity extends Activity {
 		ll = new ListLoader();
 		try {
 			if(ll.execute().get()){
-				Toast.makeText(this, gameLines.toString(), Toast.LENGTH_LONG).show();
+				// Toast.makeText(this, gameLines.toString(), Toast.LENGTH_LONG).show();
 				GamesAdapter adapter = new GamesAdapter(this, gameLines);
 				listView.setAdapter(adapter);
 				listView.setOnItemClickListener(new OnItemClickListener() {
@@ -162,7 +161,7 @@ public class MyGamesActivity extends Activity {
 		
 		public ListLoader(){
 			client = new DefaultHttpClient();
-			post = new HttpPost("http://www.dentack.cz/geocatching/game-show.php");
+			post = new HttpPost("http://www.dentack.cz/geocatching/game-active.php");
 		}
 		
 		@Override
