@@ -33,4 +33,9 @@
     <string name="join">Join</string>
     <string name="cancel">Cancel</string>
     
+    <string name="back_pressed_title">Back button pressed</string>
+	<string name="back_pressed">What would you like to do now?</string>
+	<string name="turnoff">Turn off</string>
+	<string name="logout">Log out</string>
+    
 </resources>

@@ -110,6 +110,8 @@ public final class R {
     }
     public static final class string {
         public static final int app_name=0x7f060001;
+        public static final int back_pressed=0x7f06001d;
+        public static final int back_pressed_title=0x7f06001c;
         public static final int cancel=0x7f06001b;
         public static final int close=0x7f060009;
         public static final int error=0x7f060007;
@@ -129,6 +131,7 @@ public final class R {
         public static final int log_w_twitter=0x7f060014;
         public static final int login=0x7f060002;
         public static final int login_button=0x7f060005;
+        public static final int logout=0x7f06001f;
         public static final int main_menu_title=0x7f06000a;
         public static final int password=0x7f060003;
         public static final int player_game_list_label=0x7f06000c;
@@ -136,6 +139,7 @@ public final class R {
         public static final int remember_login=0x7f060004;
         public static final int settings_label=0x7f06000e;
         public static final int tmp_label=0x7f06000f;
+        public static final int turnoff=0x7f06001e;
         public static final int wrong_parameters=0x7f060008;
     }
 }
