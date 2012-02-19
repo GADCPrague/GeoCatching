@@ -60,15 +60,15 @@ public class GameListActivity extends Activity {
 			
 			if (rowView == null) {
 				LayoutInflater inflater = activity.getLayoutInflater();
-				rowView = inflater.inflate(R.layout., null);
+				rowView = inflater.inflate(R.layout.game_list_item_layout, null);
 				sView = new SingleGameView();
 				
-				sView.name = (TextView)rowView.findViewById(R.id.);
-				sView.location = (TextView)rowView.findViewById(R.id.);
-				sView.capacity = (TextView)rowView.findViewById(R.id.);
-				sView.connected = (TextView)rowView.findViewById(R.id.);
-				sView.start = (TextView)rowView.findViewById(R.id.);
-				sView.end = (TextView)rowView.findViewById(R.id.);
+				sView.name = (TextView)rowView.findViewById(R.id.game_list_name_label);
+				sView.location = (TextView)rowView.findViewById(R.id.game_list_location_label);
+				sView.capacity = (TextView)rowView.findViewById(R.id.game_list_capacity_label);
+				sView.connected = (TextView)rowView.findViewById(R.id.game_list_connected_label);
+				sView.start = (TextView)rowView.findViewById(R.id.game_list_start_label);
+				sView.end = (TextView)rowView.findViewById(R.id.game_list_end_label);
 				rowView.setTag(sView);
 			} else {
 				sView = (SingleGameView) rowView.getTag();
