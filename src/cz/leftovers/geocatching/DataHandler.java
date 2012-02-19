@@ -76,7 +76,7 @@ public class DataHandler {
 		pogs.interests = "trolling";
 	}
 	
-	private class ParsedActiveGamesSet {
+	class ParsedActiveGamesSet {
 		public ArrayList<String> names = new ArrayList<String>();
 		public ArrayList<String> locations = new ArrayList<String>();
 		public ArrayList<Integer> capacity = new ArrayList<Integer>();
@@ -84,7 +84,7 @@ public class DataHandler {
 		public ArrayList<String> starts = new ArrayList<String>();
 		public ArrayList<String> ends = new ArrayList<String>();
 	}
-	private class ParsedMyGamesSet {
+	class ParsedMyGamesSet {
 		public ArrayList<String> names = new ArrayList<String>();
 		public ArrayList<String> locations = new ArrayList<String>();
 		public ArrayList<Integer> capacity = new ArrayList<Integer>();
@@ -93,11 +93,11 @@ public class DataHandler {
 		public ArrayList<String> ends = new ArrayList<String>();
 	}
 	
-	private class ParsedOneGameSet {
-		private int activeUsersCount;
-		private int allUsersCount;
-		private String preyName;
-		private int preyAge;
-		private String interests;
+	class ParsedOneGameSet {
+		public int activeUsersCount;
+		public int allUsersCount;
+		public String preyName;
+		public int preyAge;
+		public String interests;
 	}
 }

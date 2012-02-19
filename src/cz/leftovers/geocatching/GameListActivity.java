@@ -2,20 +2,13 @@ package cz.leftovers.geocatching;
 
 import java.util.List;
 
-import cz.casablanca.android.commanderapp.DataLoaderBeta;
-import cz.casablanca.android.commanderapp.R;
-import cz.casablanca.android.commanderapp.TripsActivity.TripsListExpandableAdapter.SingleTripView;
-import cz.casablanca.android.commanderapp.TripsActivity.TripsListExpandableAdapter.SingleTripViewDetails;
 import android.app.Activity;
 import android.os.Bundle;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AbsListView;
 import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
-import android.widget.BaseExpandableListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -35,11 +28,6 @@ public class GameListActivity extends Activity {
 		listView.setAdapter(adapter);
 	}
 	
-	
-	
-	
-	
-	
 	class GamesAdapter extends BaseAdapter {
 		Activity activity;
 		List<String> objects;
@@ -52,41 +40,56 @@ public class GameListActivity extends Activity {
 		
 		@Override
 		public int getCount() {
-			// TODO Auto-generated method stub
-			return 0;
+			return objects.size();
 		}
 
 		@Override
 		public Object getItem(int position) {
-			// TODO Auto-generated method stub
-			return null;
+			return objects.get(position);
 		}
 
 		@Override
 		public long getItemId(int position) {
-			// TODO Auto-generated method stub
-			return 0;
+			return objects.get(position).hashCode();
 		}
 
 		@Override
 		public View getView(int position, View convertView, ViewGroup parent) {
-			// TODO Auto-generated method stub
-			return null;
-		}	
-		
-		
-		protected class SingleTripView {
-			protected TextView date;
-			protected TextView duration;
-			protected TextView distance;
-			protected TextView driver;
+			View rowView = convertView;
+			SingleGameView sView = null;
+			
+			if (rowView == null) {
+				LayoutInflater inflater = activity.getLayoutInflater();
+				rowView = inflater.inflate(R.layout., null);
+				sView = new SingleGameView();
+				
+				sView.name = (TextView)rowView.findViewById(R.id.);
+				sView.location = (TextView)rowView.findViewById(R.id.);
+				sView.capacity = (TextView)rowView.findViewById(R.id.);
+				sView.connected = (TextView)rowView.findViewById(R.id.);
+				sView.start = (TextView)rowView.findViewById(R.id.);
+				sView.end = (TextView)rowView.findViewById(R.id.);
+				rowView.setTag(sView);
+			} else {
+				sView = (SingleGameView) rowView.getTag();
+			}
+			sView.name.setText(MainMenuActivity.dh.pags.names.get(position));
+			sView.location.setText(MainMenuActivity.dh.pags.locations.get(position));
+			sView.capacity.setText(MainMenuActivity.dh.pags.capacity.get(position)+"");
+			sView.connected.setText(MainMenuActivity.dh.pags.connected.get(position)+"");
+			sView.start.setText(MainMenuActivity.dh.pags.starts.get(position));
+			sView.end.setText(MainMenuActivity.dh.pags.ends.get(position));
+			
+			return rowView;
 		}
 		
-		protected class SingleTripViewDetails {
-			protected TextView fromToData;
-			protected TextView tachoData;
-			protected TextView originData;
-			protected TextView destinationData;
+		protected class SingleGameView {
+			protected TextView name;
+			protected TextView location;
+			protected TextView capacity;
+			protected TextView connected;
+			protected TextView start;
+			protected TextView end;
 		}
 	}
 	
