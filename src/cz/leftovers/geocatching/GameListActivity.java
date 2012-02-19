@@ -1,8 +1,22 @@
 package cz.leftovers.geocatching;
 
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.NameValuePair;
+import org.apache.http.ParseException;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.util.EntityUtils;
+
 import android.app.Activity;
+import android.app.ProgressDialog;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +27,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 public class GameListActivity extends Activity {
+	public String response;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -93,6 +108,49 @@ public class GameListActivity extends Activity {
 		}
 	}
 	
+	
+	
+	
+	
+	
+	
+	
+	private class ListLoader extends AsyncTask<Integer, Void, Boolean>{
+		ProgressDialog pd;
+		HttpClient client;
+		HttpPost post;
+		HttpResponse resp;
+		
+		public ListLoader(){
+			client = new DefaultHttpClient();
+			post = new HttpPost("http://www.dentack.cz/geocatching/game-show.php");
+		}
+		
+		@Override
+		protected Boolean doInBackground(Integer... params) {	
+			try {
+				post.setEntity(new UrlEncodedFormEntity(new ArrayList<NameValuePair>()));
+				resp = client.execute(post);
+				HttpEntity ent = resp.getEntity();
+				response = EntityUtils.toString(ent, "UTF-8");
+			} catch (ParseException e) {
+				e.printStackTrace();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			return true;
+		}
+		
+		@Override
+		protected void onPreExecute() {
+			pd = ProgressDialog.show(GameListActivity.this, "","Loading",true);
+		}
+		
+		@Override
+		protected void onPostExecute(Boolean result) {
+			pd.dismiss();
+		}
+	}
 	
 	
 	
