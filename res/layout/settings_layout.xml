@@ -15,6 +15,7 @@
         android:layout_height="50dp"
         android:layout_width="50dp"
         android:src="@drawable/ic_facebook"
+        android:id="@+id/fb_logo"
     />
     <TextView
        android:layout_height="wrap_content"
@@ -27,6 +28,7 @@
         android:layout_height="50dp"
         android:layout_width="50dp"
         android:src="@drawable/ic_gplus"
+        android:id="@+id/gplus_logo"
     />
     <TextView
        android:layout_height="wrap_content"
@@ -39,6 +41,7 @@
         android:layout_height="50dp"
         android:layout_width="50dp"
         android:src="@drawable/ic_foursquare"
+        android:id="@+id/4sq_logo"
     />
     <TextView
        android:layout_height="wrap_content"
@@ -51,5 +54,6 @@
         android:layout_height="50dp"
         android:layout_width="50dp"
         android:src="@drawable/ic_twitter"
+        android:id="@+id/twitter_logo"
     />
 </LinearLayout>

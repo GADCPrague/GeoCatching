@@ -53,6 +53,7 @@ public final class R {
         public static final int selector_btn_tmp=0x7f020010;
     }
     public static final class id {
+        public static final int 4sq_logo=0x7f070031;
         public static final int buttonExit=0x7f07002c;
         public static final int buttonGameList=0x7f070016;
         public static final int buttonPlayerGameList=0x7f07001a;
@@ -61,6 +62,7 @@ public final class R {
         public static final int buttonTMP=0x7f070028;
         public static final int buttonsFrame=0x7f070012;
         public static final int checkBox_remember=0x7f07000c;
+        public static final int fb_logo=0x7f07002f;
         public static final int frameLayout1=0x7f070014;
         public static final int frameLayout2=0x7f070018;
         public static final int frameLayout3=0x7f07001d;
@@ -75,6 +77,7 @@ public final class R {
         public static final int game_list_item_players_label=0x7f070003;
         public static final int game_list_item_players_value=0x7f070004;
         public static final int games_listview=0x7f070007;
+        public static final int gplus_logo=0x7f070030;
         public static final int labelExit=0x7f07002d;
         public static final int labelGameList=0x7f070017;
         public static final int labelPlayerGameList=0x7f07001b;
@@ -100,6 +103,7 @@ public final class R {
         public static final int titleButton4=0x7f070022;
         public static final int titleButton5=0x7f070027;
         public static final int titleButton6=0x7f07002b;
+        public static final int twitter_logo=0x7f070032;
     }
     public static final class layout {
         public static final int game_list_item_layout=0x7f030000;
