@@ -112,11 +112,13 @@ public final class R {
         public static final int settings_layout=0x7f030006;
     }
     public static final class string {
+        public static final int about_label=0x7f06000f;
         public static final int app_name=0x7f060001;
         public static final int back_pressed=0x7f06001d;
         public static final int back_pressed_title=0x7f06001c;
         public static final int cancel=0x7f06001b;
         public static final int close=0x7f060009;
+        public static final int connect_with=0x7f060021;
         public static final int error=0x7f060007;
         public static final int exit_label=0x7f060010;
         public static final int game_list_item_date=0x7f060017;
@@ -142,7 +144,6 @@ public final class R {
         public static final int remember_login=0x7f060004;
         public static final int settings_label=0x7f06000e;
         public static final int social_logo=0x7f060020;
-        public static final int tmp_label=0x7f06000f;
         public static final int turnoff=0x7f06001e;
         public static final int wrong_parameters=0x7f060008;
     }
