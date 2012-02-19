@@ -104,12 +104,7 @@ public class GameListActivity extends Activity {
 		}
 	}
 	
-	
-	
-	
-	
-	
-	
+
 	
 	private class ListLoader extends AsyncTask<Integer, Void, Boolean>{
 		ProgressDialog pd;
@@ -139,7 +134,7 @@ public class GameListActivity extends Activity {
 		
 		@Override
 		protected void onPreExecute() {
-			pd = ProgressDialog.show(GameListActivity.this, "","Loading",true);
+			pd = ProgressDialog.show(GameListActivity.this, "", "Loading", true);
 		}
 		
 		@Override
