@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class SingleGameActivity extends Activity {
 	@Override
@@ -21,6 +22,16 @@ public class SingleGameActivity extends Activity {
 				DialogPrey ad = new DialogPrey(SingleGameActivity.this);
 				ad.requestWindowFeature(Window.FEATURE_NO_TITLE);
 				ad.show();
+				
+			}
+		});
+		
+		btn = (Button)this.findViewById(R.id.button2);
+		btn.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Toast.makeText(SingleGameActivity.this, "You gave up, thanks for playing!", Toast.LENGTH_LONG);
 				
 			}
 		});
