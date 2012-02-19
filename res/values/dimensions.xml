@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen  name="main_menu_font_size">16sp</dimen>
+    <dimen  name="main_menu_label_padding_top">1dp</dimen>
+    <dimen  name="main_menu_shrink_factor">20dp</dimen>
+    <dimen  name="main_menu_top_bar">50dp</dimen>
+    <dimen  name="main_menu_top_bar_font_size">19sp</dimen>
+    
+</resources>

@@ -10,4 +10,13 @@
     <string name="error">ERROR</string>
     <string name="wrong_parameters">Wrong parameters</string>
     <string name="close">close</string>
+    
+    <string name="main_menu_title">The    GeoCatching     Game</string>
+    <string name="game_list_label">All games</string>
+    <string name="player_game_list_label">My games</string>
+    <string name="history_label">History</string>
+    <string name="settings_label">Settings</string>
+    <string name="tmp_label">TMP</string>
+    <string name="exit_label">Exit</string>
+    
 </resources>
