@@ -1,4 +1,6 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical" 
@@ -6,7 +8,6 @@
     android:paddingBottom="5dp"
     android:paddingLeft="3dp"
     android:background="@color/color_common_backgroud">
-   
     <TextView
             android:id="@+id/game_list_item_main_text"
             android:layout_width="wrap_content"
@@ -15,17 +16,13 @@
             android:layout_gravity="left"
             android:textSize="@dimen/game_list_item_main_text"
             android:textStyle="normal"
-            android:textColor="@color/color_common_text"
-            
-            android:text="Praha - Chyť mě if you can" />
-    
+            android:textColor="@color/color_common_text"/>
   	<LinearLayout
     	android:layout_width="wrap_content"
    		android:layout_height="wrap_content"
     	android:orientation="horizontal" 
     	android:paddingBottom="2dp"
     	android:paddingLeft="2dp">
-    
 	    <TextView
 	            android:id="@+id/game_list_item_location_label"
 	            android:layout_width="wrap_content"
@@ -35,7 +32,6 @@
 	            android:textSize="@dimen/game_list_item_sub_text"
 	            android:textStyle="normal"
 	            android:textColor="@color/color_game_list_item_subtext"
-	            android:text="Lokace:"
 	            />
 	     <TextView
 	            android:id="@+id/game_list_item_location_value"
@@ -45,7 +41,6 @@
 	            android:layout_gravity="left"
 	            android:textSize="@dimen/game_list_item_sub_text"
 	            android:textColor="@color/color_game_list_item_subtext_location"
-	            android:text="Pardubice"
 	            android:textStyle="bold"
 	            android:paddingRight="@dimen/game_list_item_sub_items_padding"/>
 	    
@@ -59,7 +54,6 @@
 	            android:textSize="@dimen/game_list_item_sub_text"
 	            android:textStyle="normal"
 	            android:textColor="@color/color_game_list_item_subtext"
-	            android:text="Přihlášených: "
 	            />
 	    
 	    <TextView
@@ -70,10 +64,8 @@
 	            android:layout_gravity="left"
 	            android:textSize="@dimen/game_list_item_sub_text"
 	            android:textColor="@color/color_game_list_item_subtext_players"
-	            android:text="20/25"
 	            android:textStyle="bold"
 	            android:paddingRight="@dimen/game_list_item_sub_items_padding"/>
-	    
 	    <TextView
 	            android:id="@+id/game_list_item_date_label"
 	            android:layout_width="wrap_content"
@@ -83,7 +75,6 @@
 	            android:textSize="@dimen/game_list_item_sub_text"
 	            android:textStyle="normal"
 	            android:textColor="@color/color_game_list_item_subtext"
-	            android:text="Termín: "
 	            />
 	    <TextView
 	            android:id="@+id/game_list_item_date_value"
@@ -93,10 +84,7 @@
 	            android:layout_gravity="left"
 	            android:textSize="@dimen/game_list_item_sub_text"
 	            android:textColor="@color/color_game_list_item_subtext_date"
-	            android:text="12.03.2012-18.03.2012"
 	            android:textStyle="bold"
 	            android:paddingRight="@dimen/game_list_item_sub_items_padding"/>
-    
     </LinearLayout>
-        
 </LinearLayout>

@@ -183,16 +183,16 @@
 		        android:layout_gravity="center_vertical|center_horizontal"
 		        >
 	      	  	<Button
-	         		android:id="@+id/buttonTMP"
+	         		android:id="@+id/buttonAbout"
 	           		android:layout_width="wrap_content"
 	           	 	android:layout_height="wrap_content"
-	            	android:background="@drawable/selector_btn_tmp" 
+	            	android:background="@drawable/selector_btn_about" 
 	            	android:layout_gravity="center_vertical|center_horizontal"/>
 	      	  	 <TextView 
-		            android:id="@+id/labelTMP"
+		            android:id="@+id/labelAbout"
 		            android:layout_width="wrap_content"
 		            android:layout_height="wrap_content"
-		            android:text="@string/tmp_label"
+		            android:text="@string/about_label"
 		            android:layout_gravity="center_horizontal|bottom"
 		            android:typeface="sans"
 		            android:textSize="@dimen/main_menu_font_size"
