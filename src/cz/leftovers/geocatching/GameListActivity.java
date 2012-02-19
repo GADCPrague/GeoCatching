@@ -103,9 +103,9 @@ public class GameListActivity extends Activity {
 				sView = (SingleGameView) rowView.getTag();
 			}
 			sView.name.setText(objects.get(position).name);
-			sView.location.setText( R.string.game_list_item_location + ": " + objects.get(position).area);
-			sView.players.setText( R.string.game_list_item_players+ ": " + 0 + "/" + objects.get(position).capacity);
-			sView.date.setText( R.string.game_list_item_date + ": " + objects.get(position).gamefrom + "-" + objects.get(position).gameto);
+			sView.location.setText( getString(R.string.game_list_item_location) + ": " + objects.get(position).area);
+			sView.players.setText( getString(R.string.game_list_item_players) + ": " + 0 + "/" + objects.get(position).capacity);
+			sView.date.setText( getString(R.string.game_list_item_date) + ": " + objects.get(position).gamefrom + "-" + objects.get(position).gameto);
 			
 			return rowView;
 		}
