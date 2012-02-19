@@ -15,6 +15,8 @@ public class MainMenuActivity extends Activity {
 	private Button buttonTMP;
 	private Button buttonExit;
 	
+	public static DataHandler dh;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
