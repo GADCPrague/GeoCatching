@@ -39,8 +39,6 @@
 	<string name="logout">Log out</string>
 	
 	<string name="social_logo">Social network logo</string>
-	
-	<string name="connect_with">Connect with</string>
     
 	<string name="connect_with">Connect with:</string>
 </resources>
