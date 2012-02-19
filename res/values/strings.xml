@@ -24,4 +24,8 @@
     <string name="log_w_4sq">Connect with foursquare</string>
     <string name="log_w_twitter">Connect with twitter</string>
     
+    <string name="game_list_item_location">Location</string>
+    <string name="game_list_item_players">Players</string>
+    <string name="game_list_item_date">Date</string>
+    
 </resources>
