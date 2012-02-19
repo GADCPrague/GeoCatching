@@ -5,6 +5,7 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
+
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
@@ -14,18 +15,24 @@ import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.util.EntityUtils;
+
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
@@ -40,14 +47,36 @@ public class GameListActivity extends Activity {
 		setContentView(R.layout.game_list_layout);
 		
 		ListView listView = (ListView) findViewById(R.id.games_listview);
-		
-		
 		ll = new ListLoader();
 		try {
 			if(ll.execute().get()){
 				Toast.makeText(this, gameLines.toString(), Toast.LENGTH_LONG).show();
 				GamesAdapter adapter = new GamesAdapter(this, gameLines);
 				listView.setAdapter(adapter);
+				
+				listView.setOnItemClickListener(new OnItemClickListener() {
+
+					@Override
+					public void onItemClick(AdapterView<?> arg0, View arg1,
+							int arg2, long arg3) {
+						final AlertDialog al = new AlertDialog.Builder(GameListActivity.this).create();
+						al.setTitle(getResources().getString(R.string.join_game_title));
+						al.setMessage(getResources().getString(R.string.game_pressed));
+						
+						al.setButton(getResources().getString(R.string.join), new DialogInterface.OnClickListener() {
+							public void onClick(DialogInterface dialog, int which) {
+								al.dismiss();
+							}
+						});
+						al.setButton3(getResources().getString(R.string.cancel), new DialogInterface.OnClickListener() {
+							public void onClick(DialogInterface dialog, int which) {
+								al.dismiss();
+							}
+						});
+						al.show();
+						
+					}
+				});
 			}
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block

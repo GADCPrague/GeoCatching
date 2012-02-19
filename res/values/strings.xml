@@ -28,4 +28,9 @@
     <string name="game_list_item_players">Players</string>
     <string name="game_list_item_date">Date</string>
     
+    <string name="join_game_title">Game</string>
+    <string name="game_pressed">Would you like to join this game?</string>
+    <string name="join">Join</string>
+    <string name="cancel">Cancel</string>
+    
 </resources>

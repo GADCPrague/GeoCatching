@@ -103,6 +103,7 @@ public final class R {
     }
     public static final class string {
         public static final int app_name=0x7f060001;
+        public static final int cancel=0x7f06001b;
         public static final int close=0x7f060009;
         public static final int error=0x7f060007;
         public static final int exit_label=0x7f060010;
@@ -110,8 +111,11 @@ public final class R {
         public static final int game_list_item_location=0x7f060015;
         public static final int game_list_item_players=0x7f060016;
         public static final int game_list_label=0x7f06000b;
+        public static final int game_pressed=0x7f060019;
         public static final int hello=0x7f060000;
         public static final int history_label=0x7f06000d;
+        public static final int join=0x7f06001a;
+        public static final int join_game_title=0x7f060018;
         public static final int log_w_4sq=0x7f060013;
         public static final int log_w_fb=0x7f060011;
         public static final int log_w_gplus=0x7f060012;
