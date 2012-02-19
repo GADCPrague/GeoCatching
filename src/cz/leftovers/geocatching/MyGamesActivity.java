@@ -17,9 +17,8 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.util.EntityUtils;
 
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.app.ProgressDialog;
-import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -57,21 +56,7 @@ public class MyGamesActivity extends Activity {
 					@Override
 					public void onItemClick(AdapterView<?> arg0, View arg1,
 							int arg2, long arg3) {
-						final AlertDialog al = new AlertDialog.Builder(MyGamesActivity.this).create();
-						al.setTitle(getResources().getString(R.string.join_game_title));
-						al.setMessage(getResources().getString(R.string.game_pressed));
-						
-						al.setButton(getResources().getString(R.string.join), new DialogInterface.OnClickListener() {
-							public void onClick(DialogInterface dialog, int which) {
-								al.dismiss();
-							}
-						});
-						al.setButton3(getResources().getString(R.string.cancel), new DialogInterface.OnClickListener() {
-							public void onClick(DialogInterface dialog, int which) {
-								al.dismiss();
-							}
-						});
-						al.show();
+						startActivity((new Intent(MyGamesActivity.this, SingleGameActivity.class)).addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION));
 					}
 				});
 			}
