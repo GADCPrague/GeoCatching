@@ -17,9 +17,8 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.util.EntityUtils;
 
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.app.ProgressDialog;
-import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -31,7 +30,6 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -50,7 +48,7 @@ public class MyGamesActivity extends Activity {
 		ll = new ListLoader();
 		try {
 			if(ll.execute().get()){
-				Toast.makeText(this, gameLines.toString(), Toast.LENGTH_LONG).show();
+				// Toast.makeText(this, gameLines.toString(), Toast.LENGTH_LONG).show();
 				GamesAdapter adapter = new GamesAdapter(this, gameLines);
 				listView.setAdapter(adapter);
 				listView.setOnItemClickListener(new OnItemClickListener() {
@@ -58,21 +56,7 @@ public class MyGamesActivity extends Activity {
 					@Override
 					public void onItemClick(AdapterView<?> arg0, View arg1,
 							int arg2, long arg3) {
-						final AlertDialog al = new AlertDialog.Builder(MyGamesActivity.this).create();
-						al.setTitle(getResources().getString(R.string.join_game_title));
-						al.setMessage(getResources().getString(R.string.game_pressed));
-						
-						al.setButton(getResources().getString(R.string.join), new DialogInterface.OnClickListener() {
-							public void onClick(DialogInterface dialog, int which) {
-								al.dismiss();
-							}
-						});
-						al.setButton3(getResources().getString(R.string.cancel), new DialogInterface.OnClickListener() {
-							public void onClick(DialogInterface dialog, int which) {
-								al.dismiss();
-							}
-						});
-						al.show();
+						startActivity((new Intent(MyGamesActivity.this, SingleGameActivity.class)).addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION));
 					}
 				});
 			}
@@ -136,7 +120,7 @@ public class MyGamesActivity extends Activity {
 			sView.location_label.setText( getString(R.string.game_list_item_location) + ": " );
 			sView.location_value.setText( objects.get(position).area );
 			sView.players_label.setText( getString(R.string.game_list_item_players) + ": " );
-			sView.players_value.setText( 0 + "/" + objects.get(position).capacity);
+			sView.players_value.setText( objects.get(position).login + "/" + objects.get(position).capacity);
 			sView.date_label.setText( getString(R.string.game_list_item_date) + ": ");
 			sView.date_value.setText( objects.get(position).gamefrom + "-" + objects.get(position).gameto);
 			
@@ -162,7 +146,7 @@ public class MyGamesActivity extends Activity {
 		
 		public ListLoader(){
 			client = new DefaultHttpClient();
-			post = new HttpPost("http://www.dentack.cz/geocatching/game-show.php");
+			post = new HttpPost("http://www.dentack.cz/geocatching/game-active.php");
 		}
 		
 		@Override
@@ -199,7 +183,7 @@ public class MyGamesActivity extends Activity {
 		String name;
 		String area;
 		int capacity;
-		//int connected;
+		int login;
 		String gamefrom;
 		String gameto;
 	}

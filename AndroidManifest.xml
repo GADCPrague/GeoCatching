@@ -36,5 +36,8 @@
         <activity android:name=".SettingsActivity" 
         		  android:theme="@android:style/Theme.NoTitleBar"
         		  android:screenOrientation="portrait"/>
+        <activity android:name=".SingleGameActivity" 
+        		  android:theme="@android:style/Theme.NoTitleBar"
+        		  android:screenOrientation="portrait"/>
     </application>
 </manifest>

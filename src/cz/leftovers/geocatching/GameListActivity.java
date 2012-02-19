@@ -31,7 +31,6 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -50,7 +49,7 @@ public class GameListActivity extends Activity {
 		ll = new ListLoader();
 		try {
 			if(ll.execute().get()){
-				Toast.makeText(this, gameLines.toString(), Toast.LENGTH_LONG).show();
+				// Toast.makeText(this, gameLines.toString(), Toast.LENGTH_LONG).show();
 				GamesAdapter adapter = new GamesAdapter(this, gameLines);
 				listView.setAdapter(adapter);
 				listView.setOnItemClickListener(new OnItemClickListener() {
@@ -58,6 +57,8 @@ public class GameListActivity extends Activity {
 					@Override
 					public void onItemClick(AdapterView<?> arg0, View arg1,
 							int arg2, long arg3) {
+						arg1.setBackgroundColor(R.color.red);
+						
 						final AlertDialog al = new AlertDialog.Builder(GameListActivity.this).create();
 						al.setTitle(getResources().getString(R.string.join_game_title));
 						al.setMessage(getResources().getString(R.string.game_pressed));
@@ -136,7 +137,7 @@ public class GameListActivity extends Activity {
 			sView.location_label.setText( getString(R.string.game_list_item_location) + ": " );
 			sView.location_value.setText( objects.get(position).area );
 			sView.players_label.setText( getString(R.string.game_list_item_players) + ": " );
-			sView.players_value.setText( 0 + "/" + objects.get(position).capacity);
+			sView.players_value.setText( objects.get(position).login + "/" + objects.get(position).capacity);
 			sView.date_label.setText( getString(R.string.game_list_item_date) + ": ");
 			sView.date_value.setText( objects.get(position).gamefrom + "-" + objects.get(position).gameto);
 			
@@ -199,7 +200,7 @@ public class GameListActivity extends Activity {
 		String name;
 		String area;
 		int capacity;
-		//int connected;
+		int login;
 		String gamefrom;
 		String gameto;
 	}
