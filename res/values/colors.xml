@@ -13,5 +13,6 @@
 	<color name="color_game_list_item_subtext_players">#00DD00</color>
 	<color name="color_game_list_item_subtext_date">#0000DD</color>
 	<color name="color_game_list_divider">#cccccc</color>
+	<color name="red">#FF0000</color>
         
 </resources>

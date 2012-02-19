@@ -57,6 +57,8 @@ public class GameListActivity extends Activity {
 					@Override
 					public void onItemClick(AdapterView<?> arg0, View arg1,
 							int arg2, long arg3) {
+						arg1.setBackgroundColor(R.color.red);
+						
 						final AlertDialog al = new AlertDialog.Builder(GameListActivity.this).create();
 						al.setTitle(getResources().getString(R.string.join_game_title));
 						al.setMessage(getResources().getString(R.string.game_pressed));
