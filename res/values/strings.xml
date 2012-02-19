@@ -16,13 +16,13 @@
     <string name="player_game_list_label">My games</string>
     <string name="history_label">History</string>
     <string name="settings_label">Settings</string>
-    <string name="tmp_label">TMP</string>
+    <string name="about_label">About</string>
     <string name="exit_label">Exit</string>
     
-    <string name="log_w_fb">Connect with facebook</string>
-    <string name="log_w_gplus">Connect with Google+</string>
-    <string name="log_w_4sq">Connect with foursquare</string>
-    <string name="log_w_twitter">Connect with twitter</string>
+    <string name="log_w_fb">Facebook</string>
+    <string name="log_w_gplus">Google+</string>
+    <string name="log_w_4sq">Foursquare</string>
+    <string name="log_w_twitter">Ttwitter</string>
     
     <string name="game_list_item_location">Location</string>
     <string name="game_list_item_players">Players</string>

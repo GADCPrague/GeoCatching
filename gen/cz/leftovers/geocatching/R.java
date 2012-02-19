@@ -34,31 +34,32 @@ public final class R {
         public static final int main_menu_top_bar_font_size=0x7f050004;
     }
     public static final class drawable {
-        public static final int ic_all_games_on=0x7f020000;
-        public static final int ic_exit1_on=0x7f020001;
-        public static final int ic_exit_on=0x7f020002;
-        public static final int ic_facebook=0x7f020003;
-        public static final int ic_foursquare=0x7f020004;
-        public static final int ic_gplus=0x7f020005;
-        public static final int ic_history_on=0x7f020006;
-        public static final int ic_launcher=0x7f020007;
-        public static final int ic_player_games_on=0x7f020008;
-        public static final int ic_settings_on=0x7f020009;
-        public static final int ic_twitter=0x7f02000a;
-        public static final int selector_btn_all_games=0x7f02000b;
-        public static final int selector_btn_exit=0x7f02000c;
-        public static final int selector_btn_history=0x7f02000d;
-        public static final int selector_btn_player_games=0x7f02000e;
-        public static final int selector_btn_settings=0x7f02000f;
-        public static final int selector_btn_tmp=0x7f020010;
+        public static final int ic_about_on=0x7f020000;
+        public static final int ic_all_games_on=0x7f020001;
+        public static final int ic_exit1_on=0x7f020002;
+        public static final int ic_exit_on=0x7f020003;
+        public static final int ic_facebook=0x7f020004;
+        public static final int ic_foursquare=0x7f020005;
+        public static final int ic_gplus=0x7f020006;
+        public static final int ic_history_on=0x7f020007;
+        public static final int ic_launcher=0x7f020008;
+        public static final int ic_player_games_on=0x7f020009;
+        public static final int ic_settings_on=0x7f02000a;
+        public static final int ic_twitter=0x7f02000b;
+        public static final int selector_btn_about=0x7f02000c;
+        public static final int selector_btn_all_games=0x7f02000d;
+        public static final int selector_btn_exit=0x7f02000e;
+        public static final int selector_btn_history=0x7f02000f;
+        public static final int selector_btn_player_games=0x7f020010;
+        public static final int selector_btn_settings=0x7f020011;
     }
     public static final class id {
+        public static final int buttonAbout=0x7f070028;
         public static final int buttonExit=0x7f07002c;
         public static final int buttonGameList=0x7f070016;
         public static final int buttonPlayerGameList=0x7f07001a;
         public static final int buttonPlayerHistory=0x7f07001f;
         public static final int buttonSettings=0x7f070023;
-        public static final int buttonTMP=0x7f070028;
         public static final int buttonsFrame=0x7f070012;
         public static final int checkBox_remember=0x7f07000c;
         public static final int frameLayout1=0x7f070014;
@@ -75,12 +76,12 @@ public final class R {
         public static final int game_list_item_players_label=0x7f070003;
         public static final int game_list_item_players_value=0x7f070004;
         public static final int games_listview=0x7f070007;
+        public static final int labelAbout=0x7f070029;
         public static final int labelExit=0x7f07002d;
         public static final int labelGameList=0x7f070017;
         public static final int labelPlayerGameList=0x7f07001b;
         public static final int labelPlayerHistory=0x7f070020;
         public static final int labelSettings=0x7f070024;
-        public static final int labelTMP=0x7f070029;
         public static final int layout=0x7f070025;
         public static final int layoutButtonRow1=0x7f070013;
         public static final int layoutButtonRow2=0x7f07001c;
