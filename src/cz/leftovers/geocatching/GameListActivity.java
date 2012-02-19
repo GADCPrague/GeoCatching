@@ -78,22 +78,20 @@ public class GameListActivity extends Activity {
 				rowView = inflater.inflate(R.layout.game_list_item_layout, null);
 				sView = new SingleGameView();
 				
-				sView.name = (TextView)rowView.findViewById(R.id.game_list_name_label);
-				sView.location = (TextView)rowView.findViewById(R.id.game_list_location_label);
-				sView.capacity = (TextView)rowView.findViewById(R.id.game_list_capacity_label);
-				sView.connected = (TextView)rowView.findViewById(R.id.game_list_connected_label);
-				sView.start = (TextView)rowView.findViewById(R.id.game_list_start_label);
-				sView.end = (TextView)rowView.findViewById(R.id.game_list_end_label);
+				sView.name = (TextView)rowView.findViewById(R.id.game_list_item_main_text);
+				sView.location = (TextView)rowView.findViewById(R.id.game_list_item_location);
+				sView.players = (TextView)rowView.findViewById(R.id.game_list_item_players);
+				sView.date = (TextView)rowView.findViewById(R.id.game_list_item_date);
+
 				rowView.setTag(sView);
 			} else {
 				sView = (SingleGameView) rowView.getTag();
 			}
-			sView.name.setText(MainMenuActivity.dh.pags.names.get(position));
-			sView.location.setText(MainMenuActivity.dh.pags.locations.get(position));
-			sView.capacity.setText(MainMenuActivity.dh.pags.capacity.get(position)+"");
-			sView.connected.setText(MainMenuActivity.dh.pags.connected.get(position)+"");
-			sView.start.setText(MainMenuActivity.dh.pags.starts.get(position));
-			sView.end.setText(MainMenuActivity.dh.pags.ends.get(position));
+			sView.name.setText( MainMenuActivity.dh.pags.names.get(position) );
+			sView.location.setText( R.string.game_list_item_location + ": " + MainMenuActivity.dh.pags.locations.get(position) );
+			sView.players.setText( R.string.game_list_item_players+ ": " + MainMenuActivity.dh.pags.connected.get(position) + "/" + MainMenuActivity.dh.pags.capacity.get(position) );
+			sView.date.setText( R.string.game_list_item_date + ": " + MainMenuActivity.dh.pags.starts.get(position) + "-" + MainMenuActivity.dh.pags.ends.get(position) );
+
 			
 			return rowView;
 		}
@@ -101,10 +99,8 @@ public class GameListActivity extends Activity {
 		protected class SingleGameView {
 			protected TextView name;
 			protected TextView location;
-			protected TextView capacity;
-			protected TextView connected;
-			protected TextView start;
-			protected TextView end;
+			protected TextView players;
+			protected TextView date;
 		}
 	}
 	

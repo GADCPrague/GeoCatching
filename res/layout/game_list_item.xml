@@ -2,10 +2,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical" 
-    android:paddingTop="5dp"
-    android:paddingBottom="5dp"
-    android:paddingLeft="5dp"
-    android:background="#ffffff">
+    android:paddingTop="5dp">
    
     <TextView
             android:id="@+id/game_list_item_main_text"
@@ -15,9 +12,8 @@
             android:layout_gravity="left"
             android:textSize="@dimen/game_list_item_main_text"
             android:textStyle="normal"
-            android:textColor="#000000"
-            
-            android:text="Praha - Chyť mě if you can" />
+            android:textColor="@color/color_main_menu_text"
+            android:text="Praha - Chyť mě if you to dokážeš" />
     
   	<LinearLayout
     	android:layout_width="wrap_content"
@@ -33,7 +29,7 @@
 	            android:layout_gravity="left"
 	            android:textSize="@dimen/game_list_item_sub_text"
 	            android:textStyle="normal"
-	            android:textColor="@color/color_game_list_item_subtext"
+	            android:textColor="@color/color_main_menu_text"
 	            android:text="Lokace: Pardubice"
 	            android:paddingRight="@dimen/game_list_item_sub_items_padding"/>
 	    
@@ -45,7 +41,7 @@
 	            android:layout_gravity="left"
 	            android:textSize="@dimen/game_list_item_sub_text"
 	            android:textStyle="normal"
-	            android:textColor="@color/color_game_list_item_subtext"
+	            android:textColor="@color/color_main_menu_text"
 	            android:text="Přihlášených: 20/25"
 	            android:paddingRight="@dimen/game_list_item_sub_items_padding"/>
 	    
@@ -57,7 +53,7 @@
 	            android:layout_gravity="left"
 	            android:textSize="@dimen/game_list_item_sub_text"
 	            android:textStyle="normal"
-	            android:textColor="@color/color_game_list_item_subtext"
+	            android:textColor="@color/color_main_menu_text"
 	            android:text="Termín: 12.03.2012-18.03.2012"
 	            android:paddingRight="@dimen/game_list_item_sub_items_padding"/>
     
