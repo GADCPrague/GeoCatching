@@ -9,6 +9,9 @@
 	<color name="color_main_menu_button_title">#000000</color>
 
 	<color name="color_game_list_item_subtext">#777777</color>
+	<color name="color_game_list_item_subtext_location">#FF0000</color>
+	<color name="color_game_list_item_subtext_players">#00DD00</color>
+	<color name="color_game_list_item_subtext_date">#0000DD</color>
 	<color name="color_game_list_divider">#cccccc</color>
         
 </resources>

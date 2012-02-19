@@ -10,6 +10,7 @@
         android:layout_height="wrap_content"
         android:divider="@color/color_game_list_divider"
         android:dividerHeight="1px"
+        android:clickable="true"
         
         >
         <!-- Preview: listitem=@layout/game_list_item_layout -->
