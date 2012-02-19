@@ -6,7 +6,7 @@
     <color name="color_title_background">#555555</color>
 	<color name="color_main_menu_background">#ffffff</color>
 	<color name="color_main_menu_text">#aaaaaa</color>
-	<color name="color_main_menu_button_title">#000000</color>
+	<color name="color_main_menu_button_title">#666666</color>
 
 	<color name="color_game_list_item_subtext">#777777</color>
 	<color name="color_game_list_item_subtext_location">#FF0000</color>
