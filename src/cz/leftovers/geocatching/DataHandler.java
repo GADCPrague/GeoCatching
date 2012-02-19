@@ -2,6 +2,8 @@ package cz.leftovers.geocatching;
 
 import java.util.ArrayList;
 
+import cz.leftovers.geocatching.GameListActivity.LineOfGame;
+
 public class DataHandler {
 
 	public ParsedActiveGamesSet pags;
@@ -83,6 +85,8 @@ public class DataHandler {
 		public ArrayList<Integer> connected = new ArrayList<Integer>();
 		public ArrayList<String> starts = new ArrayList<String>();
 		public ArrayList<String> ends = new ArrayList<String>();
+		
+		public ArrayList<LineOfGame> lg;
 	}
 	class ParsedMyGamesSet {
 		public ArrayList<String> names = new ArrayList<String>();

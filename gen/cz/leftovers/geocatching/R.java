@@ -11,6 +11,7 @@ public final class R {
     public static final class attr {
     }
     public static final class color {
+<<<<<<< HEAD
         public static final int color_common_backgroud=0x7f040000;
         public static final int color_common_text=0x7f040001;
         public static final int color_game_list_divider=0x7f040007;
@@ -19,6 +20,14 @@ public final class R {
         public static final int color_main_menu_button_title=0x7f040005;
         public static final int color_main_menu_text=0x7f040004;
         public static final int color_title_background=0x7f040002;
+=======
+        public static final int color_game_list_divider=0x7f040005;
+        public static final int color_game_list_item_subtext=0x7f040004;
+        public static final int color_main_menu_background=0x7f040001;
+        public static final int color_main_menu_button_title=0x7f040003;
+        public static final int color_main_menu_text=0x7f040002;
+        public static final int color_title_background=0x7f040000;
+>>>>>>> c5e481b4a31d1477ef8d0ed94ca95234594c9259
     }
     public static final class dimen {
         public static final int game_list_item_main_text=0x7f050005;
