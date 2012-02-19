@@ -1,9 +1,10 @@
 package cz.leftovers.geocatching;
 
 import java.io.IOException;
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
-
+import java.util.concurrent.ExecutionException;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
@@ -13,21 +14,25 @@ import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.util.EntityUtils;
-
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
 public class GameListActivity extends Activity {
 	public String response;
+	ListLoader ll;
+	ArrayList<LineOfGame> gameLines;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -35,20 +40,30 @@ public class GameListActivity extends Activity {
 		setContentView(R.layout.game_list_layout);
 		
 		ListView listView = (ListView) findViewById(R.id.games_listview);
-		String[] values = new String[] { "Android", "iPhone", "WindowsMobile",
-			"Blackberry", "WebOS", "Ubuntu", "Windows7", "Max OS X",
-			"Linux", "OS/2" };
-		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-			android.R.layout.simple_list_item_1, android.R.id.text1, values);
-		listView.setAdapter(adapter);
+		
+		
+		ll = new ListLoader();
+		try {
+			if(ll.execute().get()){
+				Toast.makeText(this, gameLines.toString(), Toast.LENGTH_LONG).show();
+				GamesAdapter adapter = new GamesAdapter(this, gameLines);
+				listView.setAdapter(adapter);
+			}
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (ExecutionException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 	class GamesAdapter extends BaseAdapter {
 		Activity activity;
-		List<String> objects;
+		List<LineOfGame> objects;
 		int lastExpandedGroupPosition;
 		
-		public GamesAdapter(Activity activity, List<String> objects) {
+		public GamesAdapter(Activity activity, List<LineOfGame> objects) {
 			this.activity = activity;
 			this.objects = objects;
 		}
@@ -88,12 +103,12 @@ public class GameListActivity extends Activity {
 			} else {
 				sView = (SingleGameView) rowView.getTag();
 			}
-			sView.name.setText(MainMenuActivity.dh.pags.names.get(position));
-			sView.location.setText(MainMenuActivity.dh.pags.locations.get(position));
-			sView.capacity.setText(MainMenuActivity.dh.pags.capacity.get(position)+"");
-			sView.connected.setText(MainMenuActivity.dh.pags.connected.get(position)+"");
-			sView.start.setText(MainMenuActivity.dh.pags.starts.get(position));
-			sView.end.setText(MainMenuActivity.dh.pags.ends.get(position));
+			sView.name.setText(objects.get(position).name);
+			sView.location.setText(objects.get(position).area);
+			sView.capacity.setText(objects.get(position).capacity+"");
+			sView.connected.setText("0");
+			sView.start.setText(objects.get(position).gamefrom);
+			sView.end.setText(objects.get(position).gameto);
 			
 			return rowView;
 		}
@@ -107,13 +122,6 @@ public class GameListActivity extends Activity {
 			protected TextView end;
 		}
 	}
-	
-	
-	
-	
-	
-	
-	
 	
 	private class ListLoader extends AsyncTask<Integer, Void, Boolean>{
 		ProgressDialog pd;
@@ -133,8 +141,19 @@ public class GameListActivity extends Activity {
 				resp = client.execute(post);
 				HttpEntity ent = resp.getEntity();
 				response = EntityUtils.toString(ent, "UTF-8");
+				
+				
+				
+				Gson gs = new Gson();
+				Type typeOfJSON = new TypeToken<ArrayList<LineOfGame>>(){}.getType();
+				gameLines = gs.fromJson(response, typeOfJSON); 
+				
+				
+				
+				
+				
 			} catch (ParseException e) {
-				e.printStackTrace();
+				Log.e("GameListActivity", "Selhalo parsov‡n’", e);
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
@@ -152,11 +171,13 @@ public class GameListActivity extends Activity {
 		}
 	}
 	
-	
-	
-	
-	
-	
-	
-	
+	class LineOfGame {
+		int id;
+		String name;
+		String area;
+		int capacity;
+		//int connected;
+		String gamefrom;
+		String gameto;
+	}
 }
