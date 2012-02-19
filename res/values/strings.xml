@@ -19,4 +19,9 @@
     <string name="tmp_label">TMP</string>
     <string name="exit_label">Exit</string>
     
+    <string name="log_w_fb">Connect with facebook</string>
+    <string name="log_w_gplus">Connect with Google+</string>
+    <string name="log_w_4sq">Connect with foursquare</string>
+    <string name="log_w_twitter">Connect with twitter</string>
+    
 </resources>
