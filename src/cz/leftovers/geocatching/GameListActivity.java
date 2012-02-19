@@ -53,7 +53,6 @@ public class GameListActivity extends Activity {
 				Toast.makeText(this, gameLines.toString(), Toast.LENGTH_LONG).show();
 				GamesAdapter adapter = new GamesAdapter(this, gameLines);
 				listView.setAdapter(adapter);
-				
 				listView.setOnItemClickListener(new OnItemClickListener() {
 
 					@Override
@@ -74,7 +73,6 @@ public class GameListActivity extends Activity {
 							}
 						});
 						al.show();
-						
 					}
 				});
 			}
@@ -165,17 +163,9 @@ public class GameListActivity extends Activity {
 				resp = client.execute(post);
 				HttpEntity ent = resp.getEntity();
 				response = EntityUtils.toString(ent, "UTF-8");
-				
-				
-				
 				Gson gs = new Gson();
 				Type typeOfJSON = new TypeToken<ArrayList<LineOfGame>>(){}.getType();
 				gameLines = gs.fromJson(response, typeOfJSON); 
-				
-				
-				
-				
-				
 			} catch (ParseException e) {
 				Log.e("GameListActivity", "Selhalo parsov‡n’", e);
 			} catch (IOException e) {
