@@ -1,6 +1,8 @@
 package cz.leftovers.geocatching;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -15,11 +17,8 @@ public class MainMenuActivity extends Activity {
 	private Button buttonTMP;
 	private Button buttonExit;
 	
-	public static DataHandler dh;
-	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main_menu_layout);
 		
@@ -75,5 +74,32 @@ public class MainMenuActivity extends Activity {
 				finish();
 			}
 		});
+	}
+	
+	@Override
+	public void onBackPressed() {
+		final AlertDialog al = new AlertDialog.Builder(this).create();
+		al.setTitle(getResources().getString(R.string.back_pressed_title));
+		al.setMessage(getResources().getString(R.string.back_pressed));
+		al.setButton(getResources().getString(R.string.turnoff), new DialogInterface.OnClickListener() {
+			
+			public void onClick(DialogInterface dialog, int which) {
+				finish();
+			}
+		});
+		al.setButton3(getResources().getString(R.string.logout), new DialogInterface.OnClickListener() {
+			
+			public void onClick(DialogInterface dialog, int which) {
+				finish();
+				startActivity(new Intent(MainMenuActivity.this, LoginActivity.class));
+			}
+		});
+		al.setButton2(getResources().getString(R.string.cancel), new DialogInterface.OnClickListener() {
+			
+			public void onClick(DialogInterface dialog, int which) {
+				al.dismiss();
+			}
+		});
+		al.show();
 	}
 }

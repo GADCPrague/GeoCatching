@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="title_background_color">#DDDDAAFF</color>
+	<color name="color_common_backgroud">#ffffff</color>
+    <color name="color_common_text">#333333</color>
+    
+    <color name="color_title_background">#555555</color>
+	<color name="color_main_menu_background">#ffffff</color>
+	<color name="color_main_menu_text">#aaaaaa</color>
+	<color name="color_main_menu_button_title">#666666</color>
 
+	<color name="color_game_list_item_subtext">#777777</color>
+	<color name="color_game_list_item_subtext_location">#FF0000</color>
+	<color name="color_game_list_item_subtext_players">#00DD00</color>
+	<color name="color_game_list_item_subtext_date">#0000DD</color>
+	<color name="color_game_list_divider">#cccccc</color>
         
 </resources>
